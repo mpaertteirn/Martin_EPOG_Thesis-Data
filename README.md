@@ -4,7 +4,7 @@ This repository contains the R code and data to replicate the results and figure
 
 ---
 
-Make sure to paste a FRED API Key into "FRED_API.txt" and unzip the "ameco0_csv.zip" file for the code to run properly.
+Make sure to paste a FRED API Key into "FRED_API.txt" and unzip the "ameco0_csv.zip" file for the code to run properly. It is recommended to use the "Thesis Data.Rproj" file to ensure that the code runs in the correct working directory.
 
 The "Online_data_USA.xlsx" is the original data from Gierlinger & Krausmann (2012), which was rearranged into a more compatible formatting in the "Online_data_USA_material.csv" file. 
 
