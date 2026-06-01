@@ -15,6 +15,8 @@ Make sure your R version and the packages are up-to-date. This code was tested u
 The code generates the results and figures of the main thesis and its supplementary appendix.
 
 ## Raw Data Sources
-AMECO: https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database/download-annual-data-set-macro-economic-database-ameco_en 
+AMECO: https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database/download-annual-data-set-macro-economic-database-ameco_en
+
 UNEP IRP Global Material Flows Database: https://www.resourcepanel.org/global-material-flows-database 
+
 Gierlinger & Krausmann (2012): https://boku.ac.at/wiso/isec/data-download 
