@@ -1486,8 +1486,8 @@ for (i in c("intercept", "slope")){
   temp$Category <- c("Baseline: 1970-1980", "Pre-WTO: 1981-1994", # [removed] "WTO-Trans: 1995-1998",
                      "Post-WTO: 1999-2009","Post-GR: 2010-2024", "WTO Transition Difference")
   
-  if (i == "intercept"){temp$model_spec <- "Cumulative Levels (tonnes)"}
-  if (i == "slope"){temp$model_spec <- "Cumulative Slope (tonnes/year)"}
+  if (i == "intercept"){temp$model_spec <- "Cumulative Levels (tonnes/year)"}
+  if (i == "slope"){temp$model_spec <- "Cumulative Slope (tonnes/year^2)"}
   
   cumulative_effects<-bind_rows(cumulative_effects,temp)
 }
@@ -2159,10 +2159,10 @@ table <- {data.frame(Name = c("Domestic Extraction",
                                 "","","= I - E", "= DE + PTB", "= DMC / GDP",
                                 "","","= RME_imp - RME_exp", "= DE + RTB", "= MF / GDP",
                                 "= RTB - PTB (or MF - DMC)"),
-                    Unit = c("tonnes",
-                             "tonnes","tonnes","tonnes","tonnes","kg per $USD",
-                             "tonnes","tonnes","tonnes","tonnes","kg per $USD",
-                             "tonnes"),
+                    Unit = c("tonnes per year",
+                             "tonnes per year","tonnes per year","tonnes per year","tonnes per year","kg per $USD",
+                             "tonnes per year","tonnes per year","tonnes per year","tonnes per year","kg per $USD",
+                             "tonnes per year"),
                     Description = c("Raw materials from national sources",
                                     "Direct raw material flows from the Rest of the World",
                                     "Direct raw material flows to the Rest of the World",
@@ -2180,7 +2180,7 @@ table <- {data.frame(Name = c("Domestic Extraction",
   cols_align(align = "center", columns = c("Acronym","Formula","Unit")) %>%
   cols_width(Name ~ px(200),
              Formula ~ px(125),
-             Unit ~ px(100),
+             Unit ~ px(125),
              Description ~ px(400)) %>%
   opt_stylize(style = 3) %>%
   tab_style(
